@@ -75,7 +75,7 @@ async def clone(event):
             return await event.respond("Please don't spam links, wait until ongoing process is done.")
         user.append(f'{int(event.sender_id)}')
 
-        edit = await event.respond("Processing!")
+        edit = await event.respond("Processing!!👨‍💻")
 
         if "|" in li:
             url = li
