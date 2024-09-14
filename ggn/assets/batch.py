@@ -85,8 +85,8 @@ async def _batch(event):
             _range = await conv.get_reply()
             try:
                 value = int(_range.text)
-                if value > 1000:
-                    return await conv.send_message("You can only get up to 1000 files in a single batch.\n\nPurchase premium to go beyong limit send /plan to know more...")
+                if value > 10000:
+                    return await conv.send_message("You can only get up to 10000 files in a single batch.\n\nPurchase premium to go beyong limit send /plan to know more...")
             except ValueError:
                 return await conv.send_message("Range must be an integer!")
 
@@ -103,7 +103,7 @@ async def _batch(event):
             
 
             cd = await conv.send_message("**Batch process ongoing...**\n\nProcess completed: ", 
-                                    buttons=[[Button.url("Join Channel", url="https://t.me/forcesuscribe")]])
+                                    buttons=[[Button.url("Join Channel", url="https://t.me/tapori420_Official")]])
             co = await run_batch(userbot, Bot, user_id, cd, _link) 
             try: 
                 if co == -2:
@@ -161,7 +161,7 @@ async def run_batch(userbot, client, sender, countdown, link):
             await get_bulk_msg(userbot, client, sender, link, integer)
             protection = await client.send_message(sender, f"Sleeping for `{timer}` seconds to avoid Floodwaits and Protect account!")
             await countdown.edit(count_down, 
-                                 buttons=[[Button.url("Join Channel", url="https://t.me/forcesuscribe")]])
+                                 buttons=[[Button.url("Join Channel", url="https://t.me/tapori420_Official")]])
             await asyncio.sleep(timer)
             await protection.delete()
         except IndexError as ie:
@@ -183,12 +183,12 @@ async def run_batch(userbot, client, sender, countdown, link):
                 except Exception as e:
                     logger.info(e)
                     if countdown.text != count_down:
-                        await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/forcesuscribe")]])
+                        await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/tapori420_Official")]])
         except Exception as e:
             #logger.info(e)
             #await client.send_message(sender, f"An error occurred during cloning, batch will continue.\n\n**Error:** {str(e)}")
             if countdown.text != count_down:
-                await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/forcesuscribe")]])
+                await countdown.edit(count_down, buttons=[[Button.url("Join Channel", url="https://t.me/tapori420_Official")]])
         n = i + 1
         if n == len(ids_data[str(sender)]):
             return -2
