@@ -55,8 +55,8 @@ async def start(event):
     user_id = event.sender_id
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/forcesuscribe")],
-        [Button.url("Contact Me", url="https://t.me/Rishavdevkrr")],
+        [Button.url("Join Channel", url="https://t.me/tapori420_Official")],
+        [Button.url("Contact Me", url="https://t.me/taporibot_bot")],
     ]
     await gagan.send_file(
         event.chat_id,
@@ -108,12 +108,12 @@ async def get_registered_users_command(event):
     os.remove(filename)  # Remove the temporary file after sending
 
 S = "/start"
-START_PIC = "https://graph.org/file/68f7c22d67a16334fe499.gif"
-TEXT = "Hey! I am Advance Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 1K files range."
+START_PIC = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
+TEXT = "Hey! I am Advance Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 10K files range."
 
 
 M = "/plan"
-PREMIUM_PIC = "plan.png"
+PREMIUM_PIC = "https://te.legra.ph/file/6c66f8b192532fe758e82.jpg"
 PRE_TEXT = """💰 **Premium Price**: Starting from 50 INR accepted via **__Amazon Pay Gift Card__** (terms and conditions apply).
 📥 **Download Limit**: Users can download up to 100 files in a single batch command.
 🛑 **Batch**: You will get two modes /bulk and /batch.
@@ -125,7 +125,7 @@ PRE_TEXT = """💰 **Premium Price**: Starting from 50 INR accepted via **__Amaz
 async def plan_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Send Gift Card Code", url="https://t.me/Rishavdevkrr")]
+        [Button.url("Send Gift Card Code", url="https://t.me/taporibot_bot")]
     ]
 
     # Sending photo with caption and buttons
@@ -137,7 +137,7 @@ async def plan_command(event):
     )
 
 T = "/terms"
-TERM_PIC = "term.png"
+TERM_PIC = "https://te.legra.ph/file/5f9fb5bba66021c782d96.jpg"
 TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 ✨ We are not responsible for user deeds, and we do not promote copyrighted content. If any user engages in such activities, it is solely their responsibility.
 ✨ Upon purchase, we do not guarantee the uptime, downtime, or the validity of the plan. __Authorization and banning of users are at our discretion; we reserve the right to ban or authorize users at any time.__
@@ -148,8 +148,8 @@ TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 async def term_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Query?", url="https://t.me/Rishavdevkrr"),
-         Button.url("Channel", url="https://t.me/forcesuscribe")]
+        [Button.url("Query?", url="https://t.me/taporibot_bot"),
+         Button.url("Channel", url="https://t.me/tapori420_Official")]
     ]
 
     # Sending photo with caption and buttons
@@ -160,7 +160,7 @@ async def term_command(event):
         buttons=buttons
     )
 
-REPO_URL = "https://github.com/rishavdevkr"
+REPO_URL = "https://t.me/taporibot_bot"
 
 HELP_TEXT = """Here are the available commands:
 
@@ -247,7 +247,7 @@ async def youtube_dl_command(_, message):
 
             # Get video metadata
             metadata = video_metadata(original_file)
-            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](https://t.me/Rishavdevkr)**__"  # Set caption to the title of the video
+            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](https://t.me/taporibot_bot)**__"  # Set caption to the title of the video
             
             # Send the video file and thumbnail
             ggn = message.chat.id
