@@ -1,4 +1,4 @@
-FROM python:3.10.4-slim-buster
+FROM python:3.11-slim
 # Update the package lists and upgrade the existing packages
 RUN apt update && apt upgrade -y
 # Install necessary packages
@@ -19,3 +19,4 @@ COPY . .
 # change port -p to 10000 if not works
 # A dummy command to keep the container running
 CMD flask run -h 0.0.0.0 -p 8000 & python3 -m ggn
+
