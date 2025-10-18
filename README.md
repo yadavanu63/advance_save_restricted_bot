@@ -83,7 +83,7 @@ python3 -m ggn
 
 » Method - 1:
 - Star the repo, and fork it in desktop mode
--  <a href="https://heroku.com/deploy?template=https://github.com/yadavanu63/advance_save_restricted_bot">
+- Click on  [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/yadavanu63/advance_save_restricted_bot)
 - Fill your values and done ✅
  
 » Method - 2:
