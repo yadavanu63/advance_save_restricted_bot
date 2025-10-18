@@ -108,7 +108,7 @@ async def get_registered_users_command(event):
     os.remove(filename)  # Remove the temporary file after sending
 
 S = "/start"
-START_PIC = "https://te.legra.ph/file/923c1faac33d8c70335dc.jpg"
+START_PIC = "https://i.ibb.co/F4gDVhZk/file-878.jpg"
 TEXT = "Hey! I am Advance Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 10K files range."
 
 
@@ -282,3 +282,4 @@ def video_metadata(file):
     frame_count = vcap.get(cv2.CAP_PROP_FRAME_COUNT)
     duration = round(frame_count / fps)
     return {'width': width, 'height': height, 'duration': duration}
+
