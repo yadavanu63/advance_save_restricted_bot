@@ -8,8 +8,6 @@ RUN apt-get update && apt-get upgrade -y && \
         curl \
         bash \
         ffmpeg \
-        neofetch \
-        software-properties-common && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy requirements and install Python deps
@@ -25,3 +23,4 @@ COPY . .
 
 # Start Flask and your custom Python process together
 CMD bash -c "flask run -h 0.0.0.0 -p 8000 & python3 -m ggn"
+
