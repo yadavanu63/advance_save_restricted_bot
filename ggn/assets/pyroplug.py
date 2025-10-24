@@ -64,7 +64,7 @@ async def copy_message_with_chat_id(client, sender, chat_id, message_id):
             pass
 
         # Pin the message if it was originally pinned
-        if msg.pinned_message_message:
+        if msg.pinned_message:
             try:
                 await result.pin(both_sides=True)
             except Exception as e:
@@ -773,4 +773,5 @@ async def handle_user_input(event):
             await event.respond(f"Words added to delete list: {', '.join(words_to_delete)}")       
 
         del sessions[user_id]
+
 
